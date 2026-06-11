@@ -3,29 +3,29 @@
 ## TODO
 
 - [x] Create standard model
-- [x] Make the dataset downloadable (see "Dataset Structure & File Descriptions: OneDrive Repository")
-- [ ] Test with the whole dataset
+- [ ] Make the dataset downloadable
+- [x] Test with the whole dataset (see "Dataset Structure & File Descriptions: OneDrive Repository")
 - [ ] Implement parameter optimization
-- [ ] 
+- [ ] Modify the code to make it work also on Colab
 
 ## Dataset Structure & File Descriptions: OneDrive Repository
+
 ### 1. What "Raw pedestrian data" Files Represent
 
-The files with the **`.aedat`** extension (e.g., `1.aedat`, `2.aedat`) are recordings from an **event-based camera** (a neuromorphic vision sensor).
+The **12 files** with the **`.aedat`** extension (`1.aedat` to `12.aedat`) are raw, asynchronous recordings captured using a **DAVIS346redColor event-based camera** with a resolution of **346x260** (as summarized in the following image).
 
-* Unlike traditional cameras that capture full frames at a fixed frame rate, event cameras only record pixel-level changes in brightness asynchronously.
-* Each `.aedat` file contains a continuous stream of individual spikes/events, where each event records the exact timestamp, coordinates $(x, y)$, and polarity (increase or decrease in light) of the motion.
-* In this specific dataset, these files represent raw recordings of pedestrians moving across the camera's field of view.
+![alt text](image.png)
 
----
+* Unlike traditional frame-based cameras, this neuromorphic sensor records only pixel-level changes in brightness as a continuous stream of events defined by timestamp, $(x, y)$ coordinates, and polarity.
+* Each recording has an **average length of 30 seconds**, capturing pedestrians walking across real-world environments including corridors, streets, and squares under varying weather conditions (**Sunny and Rainy**).
 
 ### 2. How They Relate to the "train" Folder
 
-Standard neural networks cannot process a continuous, raw stream of asynchronous micro-events directly. Therefore, the raw data must be pre-processed and framed. The **"train"** folder contains the structured output of this conversion:
+Because deep learning models cannot directly ingest raw, continuous event streams, the neuromorphic data is pre-processed into a standard dataset format. The **"train"** folder contains the structured outputs of this transformation:
 
-* **"pedestrian frame":** The raw event stream from the `.aedat` files is accumulated over fixed time windows (e.g., every 30ms) to reconstruct 2D artificial frames. These images capture the contours of moving pedestrians while stationary backgrounds disappear.
-* **"pedestrian label":** This folder contains the corresponding ground-truth annotations (typically `.txt` or `.xml` files). For every generated frame, a label file provides the bounding box coordinates marking exactly where the pedestrians are located.
+* **"pedestrian frame":** The continuous event streams from the 12 `.aedat` recordings are accumulated over fixed time windows to reconstruct **4,670 2D frames**, highlighting moving subjects while filtering out static backgrounds.
+* **"pedestrian label":** This folder contains **4,670 corresponding ground-truth annotations** (bounding boxes), mapping the precise locations of the pedestrians for binary object detection.
 
 ### Summary
 
-**"Raw pedestrian data"** is the raw, neuromorphic source material. **"train"** is that exact same data sliced into synchronized frames and paired with bounding boxes, formatted specifically for the object detection model to learn from.
+**"Raw pedestrian data"** contains the 12 original neuromorphic video sequences (30s each, 346x260 resolution) from the DAVIS sensor. **"train"** represents that same source material sliced, integrated, and annotated into a ready-to-use dataset of 4,670 frame-label pairs for model training.
