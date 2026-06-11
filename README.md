@@ -3,10 +3,33 @@
 ## TODO
 
 - [x] Create standard model
+- [ ] Choose one of the two possible approaches to face the Pedestrian Detection task (see "Evaluating Spatial Grid Detection vs. Temporal Presence Verification in Neuromorphic Vision")
 - [ ] Make the dataset downloadable
 - [x] Test with the whole dataset (see "Dataset Structure & File Descriptions: OneDrive Repository")
 - [ ] Implement parameter optimization
 - [ ] Modify the code to make it work also on Colab
+
+---
+## Evaluating Spatial Grid Detection vs. Temporal Presence Verification in Neuromorphic Vision
+### Approach A: Dense Grid-Based Multi-Object Detection
+
+* **Concept:** This approach partitions the spatial dimension of the input into a localized grid or cell structure. Each cell is independently responsible for predicting the "objectness" probability and calculating precise localized bounding box coordinate offsets for any pedestrian within its boundaries.
+* **The SNN Challenge:** Training Spiking Neural Networks (SNNs) to regress precise, high-resolution continuous coordinates across a dense grid introduces immense gradient instability. Because event-based data primarily captures temporal changes (motion contours) rather than static textures, forcing a spike-based architecture to maintain fine-grained spatial representations across multiple simultaneous targets leads to extreme convergence issues during backpropagation.
+
+### Approach B: Global Presence Verification with Coarse Localization
+
+* **Concept:** This approach shifts the primary objective to the temporal domain. The network processes the spike sequence globally over a fixed set of simulation timesteps to evaluate human presence within the frame (binary classification), optionally paired with a single, image-wide bounding box regression.
+* **The SNN Advantage:** SNNs inherently excel at accumulating sparse, temporal evidence via membrane potential dynamics over time. Determining *if* an object with the distinct motion dynamics of a pedestrian is moving through the event stream aligns perfectly with the biological strengths of spiking neurons, making the loss function significantly more direct and stable.
+
+### Why Approach B is Signficantly More Advantageous
+
+For an event-based pedestrian detection project driven by spike-encoded data, **Approach B** represents the most structurally sound and efficient engineering choice due to the following core reasons:
+
+* **Exploitation of Neuromorphic Sparsity:** Event-based sensors only generate spikes when pixels detect motion. Approach B treats the network as an efficient temporal accumulator, leveraging the natural sparsity of the data to trigger a positive classification only when a meaningful train of spikes crosses the neural threshold.
+* **Gradient Convergence and Stability:** Eliminating a complex multi-cell grid removes the need for highly volatile, multi-task loss configurations (balancing background cell suppression against coordinate regression). This drastically simplifies the gradient flow through surrogate derivatives, leading to faster and highly reliable network convergence.
+* **Perfect Alignment with "Wake-Up" Edge Architectures:** In neuromorphic computing and MLOps workflows, a global presence SNN acts as an ultra-low-power **wake-up trigger**. It maintains a near-zero power profile to continuously monitor the environment, delegating computationally heavy tracking to downstream systems only when a human presence is verified—fully realizing the architectural intent of edge intelligence.
+
+---
 
 ## Dataset Structure & File Descriptions: OneDrive Repository
 
@@ -29,3 +52,5 @@ Because deep learning models cannot directly ingest raw, continuous event stream
 ### Summary
 
 **"Raw pedestrian data"** contains the 12 original neuromorphic video sequences (30s each, 346x260 resolution) from the DAVIS sensor. **"train"** represents that same source material sliced, integrated, and annotated into a ready-to-use dataset of 4,670 frame-label pairs for model training.
+
+---
