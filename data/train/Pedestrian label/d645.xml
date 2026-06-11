@@ -1,0 +1,26 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>d645.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\d645.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>147</xmin>
+			<ymin>89</ymin>
+			<xmax>185</xmax>
+			<ymax>197</ymax>
+		</bndbox>
+	</object>
+</annotation>

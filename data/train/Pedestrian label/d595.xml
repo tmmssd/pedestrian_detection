@@ -1,0 +1,26 @@
+<annotation>
+	<folder>huangyisen</folder>
+	<filename>d595.png</filename>
+	<path>C:\windows_v1.8.1\huangyisen\d595.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>119</xmin>
+			<ymin>114</ymin>
+			<xmax>169</xmax>
+			<ymax>242</ymax>
+		</bndbox>
+	</object>
+</annotation>

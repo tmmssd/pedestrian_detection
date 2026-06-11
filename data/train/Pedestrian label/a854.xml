@@ -1,0 +1,26 @@
+<annotation>
+	<folder>miaoshu</folder>
+	<filename>a854.png</filename>
+	<path>C:\Users\shu.miao\Desktop\新建文件夹\miaoshu\a854.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>80</xmin>
+			<ymin>123</ymin>
+			<xmax>144</xmax>
+			<ymax>248</ymax>
+		</bndbox>
+	</object>
+</annotation>

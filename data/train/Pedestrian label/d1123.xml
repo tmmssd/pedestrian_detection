@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>d1123.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\d1123.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>132</xmin>
+			<ymin>110</ymin>
+			<xmax>171</xmax>
+			<ymax>218</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>156</xmin>
+			<ymin>132</ymin>
+			<xmax>194</xmax>
+			<ymax>231</ymax>
+		</bndbox>
+	</object>
+</annotation>

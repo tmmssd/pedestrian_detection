@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>d1059.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\d1059.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>76</xmin>
+			<ymin>157</ymin>
+			<xmax>125</xmax>
+			<ymax>260</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>112</xmin>
+			<ymin>195</ymin>
+			<xmax>164</xmax>
+			<ymax>260</ymax>
+		</bndbox>
+	</object>
+</annotation>

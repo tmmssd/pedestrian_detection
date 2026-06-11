@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>d1218.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\d1218.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>169</xmin>
+			<ymin>76</ymin>
+			<xmax>195</xmax>
+			<ymax>171</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>192</xmin>
+			<ymin>91</ymin>
+			<xmax>215</xmax>
+			<ymax>176</ymax>
+		</bndbox>
+	</object>
+</annotation>

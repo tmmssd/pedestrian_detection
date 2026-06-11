@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>b985.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\b985.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>44</xmin>
+			<ymin>145</ymin>
+			<xmax>97</xmax>
+			<ymax>257</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>9</xmin>
+			<ymin>147</ymin>
+			<xmax>58</xmax>
+			<ymax>258</ymax>
+		</bndbox>
+	</object>
+</annotation>

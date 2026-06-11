@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>c474.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\c474.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>158</xmin>
+			<ymin>89</ymin>
+			<xmax>197</xmax>
+			<ymax>188</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>236</xmin>
+			<ymin>127</ymin>
+			<xmax>273</xmax>
+			<ymax>235</ymax>
+		</bndbox>
+	</object>
+</annotation>

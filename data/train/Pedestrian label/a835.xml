@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>a835.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\a835.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>69</xmin>
+			<ymin>138</ymin>
+			<xmax>119</xmax>
+			<ymax>260</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>144</xmin>
+			<ymin>57</ymin>
+			<xmax>160</xmax>
+			<ymax>108</ymax>
+		</bndbox>
+	</object>
+</annotation>

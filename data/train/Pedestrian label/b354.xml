@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>b354.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\b354.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>244</xmin>
+			<ymin>79</ymin>
+			<xmax>270</xmax>
+			<ymax>156</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>109</xmin>
+			<ymin>107</ymin>
+			<xmax>150</xmax>
+			<ymax>230</ymax>
+		</bndbox>
+	</object>
+</annotation>

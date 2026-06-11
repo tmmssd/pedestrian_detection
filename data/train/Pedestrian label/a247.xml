@@ -1,0 +1,38 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>a247.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\a247.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>144</xmin>
+			<ymin>86</ymin>
+			<xmax>174</xmax>
+			<ymax>168</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>176</xmin>
+			<ymin>80</ymin>
+			<xmax>212</xmax>
+			<ymax>173</ymax>
+		</bndbox>
+	</object>
+</annotation>

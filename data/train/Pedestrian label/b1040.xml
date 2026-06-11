@@ -1,0 +1,26 @@
+<annotation>
+	<folder>houjing</folder>
+	<filename>b1040.png</filename>
+	<path>D:\Program Files\windows_v1.8.1\houjing\b1040.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>159</xmin>
+			<ymin>68</ymin>
+			<xmax>188</xmax>
+			<ymax>119</ymax>
+		</bndbox>
+	</object>
+</annotation>

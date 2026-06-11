@@ -1,0 +1,26 @@
+<annotation>
+	<folder>ziyang</folder>
+	<filename>a788.png</filename>
+	<path>D:\ziyang\a788.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>346</width>
+		<height>260</height>
+		<depth>1</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>person</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>128</xmin>
+			<ymin>62</ymin>
+			<xmax>149</xmax>
+			<ymax>124</ymax>
+		</bndbox>
+	</object>
+</annotation>
