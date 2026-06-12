@@ -4,11 +4,16 @@
 
 - [x] Create standard model
 - [x] Make the dataset downloadable (see next point)
-- [ ] Make the repository public so that is not necessary specifying our tokens in the URL of the repository (i.e. REPO_URL = "https://ghp_IL_TUO_TOKEN_QUI@github.com/tmmssd/pedestrian_detection.git")
+- [x] Make the repository public
 - [x] Test with the whole dataset (see "Dataset Structure & File Descriptions: OneDrive Repository")
-- [ ] Implement parameter optimization
+- [ ] Implement Hypparameters Optimization (HPO)
+    - [x] "pedestrian_verification.ipynb"
+    - [ ] "pedestrian_detection_grid.ipynb"
 - [ ] Modify the code to make it work also on Colab
     - [x] "pedestrian_verification.ipynb"
+    - [ ] "pedestrian_detection_grid.ipynb"
+- [ ] Improve code readability and documentation
+    - [ ] "pedestrian_verification.ipynb"
     - [ ] "pedestrian_detection_grid.ipynb"
 - [ ] Choose one of the two possible approaches to face the Pedestrian Detection task (see "Evaluating Spatial Grid Detection vs. Temporal Presence Verification in Neuromorphic Vision")
 
