@@ -7,17 +7,21 @@
 - [x] Make the repository public
 - [x] Test with the whole dataset (see "Dataset Structure & File Descriptions: OneDrive Repository")
 - [ ] Implement Hypparameters Optimization (HPO)
-    - [x] "pedestrian_verification.ipynb"
+    - [x] "pedestrian_detection_multitask_snn.ipynb"
     - [ ] "pedestrian_detection_grid.ipynb"
+    - [ ] "pedestrian_detection_fpn_snn.ipynb"
 - [ ] Modify the code to make it work also on Colab
-    - [x] "pedestrian_verification.ipynb"
+    - [x] "pedestrian_detection_multitask_snn.ipynb"
     - [ ] "pedestrian_detection_grid.ipynb"
+    - [ ] "pedestrian_detection_fpn_snn.ipynb"
 - [ ] Improve code readability and documentation
-    - [x] "pedestrian_verification.ipynb"
+    - [x] "pedestrian_detection_multitask_snn.ipynb"
     - [ ] "pedestrian_detection_grid.ipynb"
+    - [ ] "pedestrian_detection_fpn_snn.ipynb"
 - [ ] Improve code efficiency
-    - [x] "pedestrian_verification.ipynb"
+    - [x] "pedestrian_detection_multitask_snn.ipynb"
     - [ ] "pedestrian_detection_grid.ipynb"
+    - [ ] "pedestrian_detection_fpn_snn.ipynb"
 - [ ] Choose one of the two possible approaches to face the Pedestrian Detection task (see "Evaluating Spatial Grid Detection vs. Temporal Presence Verification in Neuromorphic Vision")
     - [x] added a better version of the pedestrain detection task "pedestrain_detection_fpn_snn.ipynb" (it takes around 80 minutes to train), the accuracy indicated still only accounts for the presence or not of a pedestrain, not the 1 to 1 match of the true and the predicted boxes. However as you can see from the images the results are not that bad. Also I think that the SNN treats it like an RGB image but maybe we can transform it to a gray scale image to save up time and compute.
     Things that can be improved:
