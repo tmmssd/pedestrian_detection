@@ -16,11 +16,14 @@ TRAIN_DIR = "data/train"
 FRAMES_DIR = os.path.join(TRAIN_DIR, "Pedestrian frame")
 LABELS_DIR = os.path.join(TRAIN_DIR, "Pedestrian label")
 
+# [START Config]
 # Definition of main SNN and optimization hyperparameters
 num_steps = 5           # Time steps for SNN simulation
 batch_size = 128        # Batch size
 num_epochs = 10         # Training epochs
 learning_rate = 1e-3    # Learning rate for optimizer
+# [END Config]
+
 
 class PedestrianDataset(Dataset):
     def __init__(self, frames_dir, labels_dir, transform=None):
@@ -98,6 +101,8 @@ class PedestrianDataset(Dataset):
             
         return image, target
 
+
+# [START Data loading]
 # Transforms to handle 256x256 conversion
 image_transforms = transforms.Compose([
     transforms.Resize((256, 256)),
@@ -120,8 +125,10 @@ def collate_fn(batch):
 
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, num_workers=0, collate_fn=collate_fn)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False, num_workers=0, collate_fn=collate_fn)
+# [END Data loading]
 
 
+# [START Model definition]
 class SpikingPedestrianDetector(nn.Module):
     def __init__(self, 
                  beta=0.9, 
@@ -209,7 +216,9 @@ cls_loss_fn = nn.BCEWithLogitsLoss() # object classification
 
 grid_size = model.grid_size  # Spatial width/height of the final feature map layer
 orig_w, orig_h = 346, 260  # Native dataset dimensions
+# [END Model definition]
 
+# [START Training loop]
 for epoch in range(num_epochs):
     model.train()
     epoch_loss = 0
@@ -290,6 +299,7 @@ for epoch in range(num_epochs):
         epoch_loss += total_loss.item()
         
     print(f"Epoch [{epoch+1}/{num_epochs}] | Total Grid Loss: {epoch_loss:.4f}")
+# [END Training loop]
 
 
 def calculate_iou(boxA, boxB):
@@ -318,6 +328,7 @@ def calculate_iou(boxA, boxB):
         
     return interArea / float(unionArea)
 
+# [START Testing]
 def test_model_accuracy(model, data_loader, device):
     model.eval() 
     
@@ -395,5 +406,6 @@ def test_model_accuracy(model, data_loader, device):
     print("====================================================")
     
     return cls_accuracy, avg_iou
+# [END Testing]
 
 test_model_accuracy(model, test_loader, device)
